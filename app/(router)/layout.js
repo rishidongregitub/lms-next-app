@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import SideNav from "./_components/SIdeNav";
 
-const layout = ({children}) => {
+const layout = ({ children }) => {
   return (
-    <div>{children}</div>
-  )
-}
+    <div>
+      <div className="sm:w-64 hidden sm:block fixed">
+        <SideNav />
+      </div>
+      <div className="ml-64">{children}</div>
+    </div>
+  );
+};
 
 export default layout;
